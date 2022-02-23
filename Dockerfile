@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="Matias Pieroboón <mpierobon@qwertysoft.io>"
+LABEL maintainer="Franco Borrelli <fborrelli@gralsaneamiento.com.ar>"
 
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> '/etc/apk/repositories'
 
