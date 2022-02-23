@@ -5,7 +5,7 @@ LABEL maintainer="Franco Borrelli <fborrelli@gralsaneamiento.com.ar>"
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> '/etc/apk/repositories'
 
 RUN apk --no-cache update && \
-  apk --no-cache add ca-certificates groff less python3 postgresql-client mailutils swaks && \
+  apk --no-cache add ca-certificates groff less python3 python3-pip postgresql-client mailutils swaks && \
   pip3 --no-cache-dir install awscli && \
   rm -rf /var/cache/apk/*
 
