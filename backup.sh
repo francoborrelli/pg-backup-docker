@@ -13,7 +13,7 @@ if [ ! -z "$BUCKET" ]; then
   # export AWS_ACCESS_KEY_ID
   # export AWS_SECRET_ACCESS_KEY
   # export AWS_DEFAULT_REGION
-  cat $FILE | aws $AWS_ARGS s3 cp - s3://$BUCKET/$PREFIX/${POSTGRES_DATABASE}_${NOW}.sql.gz || exit 2
+  cat $FILE | aws $AWS_ARGS s3 cp - s3://$BUCKET/$PREFIX/${POSTGRES_DATABASE}_${NOW}.sql.gz  --storage-class 'GLACIER_IR' || exit 2
   echo "SQL backup uploaded successfully"
 fi
 
