@@ -32,3 +32,5 @@ if [ ! -z "$MAIL_TO" ]; then
 
   
 fi
+
+rm $FILE
