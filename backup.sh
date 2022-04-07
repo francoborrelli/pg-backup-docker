@@ -33,4 +33,6 @@ if [ ! -z "$MAIL_TO" ]; then
   
 fi
 
-rm $FILE
+if [ ! -z "$MAIL_TO" ] || [ ! -z "$BUCKET" ]; then
+  rm $FILE
+fi
