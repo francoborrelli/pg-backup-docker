@@ -23,7 +23,7 @@ services:
       - database_data:/var/lib/postgresql/data
 
   backup:
-    image: pg_backup:latest
+    image: ghcr.io/francoborrelli/pg-backup-docker:master
     restart: always
     environment:
       POSTGRES_DATABASE: 'database'
